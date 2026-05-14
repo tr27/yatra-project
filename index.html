@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>YatraExpo | Premium Char Dham Yatra Packages</title>
+        <meta
+            name="description"
+            content="Book premium Char Dham Yatra packages. Curated itineraries, comfortable stays, and reliable transport."
+        />
+
+        <!-- Editorial & Tech Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Space+Grotesk:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- FontAwesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <style>
+            /* =========================================
+           ULTRA-MINIMAL BESPOKE DESIGN SYSTEM
+        ========================================= */
+            :root {
+                --bg-paper: #f8faf9;
+                --ink-dark: #121c19;
+                --accent: #d4a373;
+                --tech-slate: #5a706a;
+                --line-art: #e0e8e6;
+                --success-green: #2e7d32;
+                --whatsapp: #25d366;
+
+                --font-serif: "Cormorant Garamond", serif;
+                --font-sans: "Space Grotesk", sans-serif;
+
+                --shadow-commercial: 0 15px 40px rgba(18, 28, 25, 0.06);
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                background-color: var(--bg-paper);
+                color: var(--ink-dark);
+                font-family: var(--font-sans);
+                font-size: 1rem;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            ::selection {
+                background-color: var(--accent);
+                color: var(--bg-paper);
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-family: var(--font-serif);
+                font-weight: 400;
+                margin: 0;
+                color: var(--ink-dark);
+                line-height: 1.1;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .container {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding: 0 5%;
+            }
+
+            .bg-mantra-texture {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 12vw;
+                color: var(--accent);
+                opacity: 0.02;
+                z-index: -1;
+                white-space: nowrap;
+                font-family: var(--font-serif);
+                pointer-events: none;
+                user-select: none;
+                font-weight: 300;
+                letter-spacing: 10px;
+            }
+
+            /* =========================================
+           CINEMATIC FULL-SCREEN HERO (ELEGANT)
+        ========================================= */
+            .hero-fullscreen {
+                position: relative;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+
+                /* Gradient ONLY at the very top and bottom. Middle is 100% clear. */
+                background:
+                    linear-gradient(
+                        to bottom,
+                        rgba(10, 20, 15, 0.5) 0%,
+                        rgba(10, 20, 15, 0) 20%,
+                        rgba(10, 20, 15, 0) 60%,
+                        rgba(10, 20, 15, 0.9) 100%
+                    ),
+                    url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80")
+                        center/cover no-repeat;
+
+                background-color: var(--ink-dark);
+                color: white;
+            }
+
+            /* Absolute Minimal Header */
+            .header {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 30px 0;
+                z-index: 10;
+            }
+            .header-inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                font-family: var(--font-serif);
+                font-size: 2rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                color: white;
+            }
+            .logo span {
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            .header-links {
+                display: flex;
+                gap: 30px;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            .header-links a {
+                color: rgba(255, 255, 255, 0.8);
+                transition: opacity 0.3s;
+            }
+            .header-links a:hover {
+                opacity: 0.5;
+            }
+
+            /* Pushes the content to the bottom */
+            .hero-spacer {
+                flex-grow: 1;
+            }
+
+            /* Highly Compact, Lowered Hero Content */
+            .hero-content {
+                text-align: center;
+                padding: 0 5% 2.5rem 5%;
+                animation: fadeUp 1.5s ease forwards;
+            }
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .hero-content h1 {
+                color: white;
+                font-size: clamp(2.5rem, 4vw, 4rem);
+                margin-bottom: 0.8rem;
+                letter-spacing: 1px;
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            }
+            .hero-content h1 i {
+                font-weight: 300;
+                color: rgba(255, 255, 255, 0.7);
+            }
+            .hero-content p {
+                font-size: 0.95rem;
+                max-width: 420px;
+                margin: 0 auto;
+                color: rgba(255, 255, 255, 0.6);
+                font-weight: 300;
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+                line-height: 1.6;
+                letter-spacing: 0.5px;
+            }
+
+            /* Minimalist Line Button */
+            .btn-minimal {
+                display: inline-block;
+                margin-top: 2rem;
+                padding-bottom: 6px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                font-family: var(--font-sans);
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: rgba(255, 255, 255, 0.9);
+                transition: all 0.4s ease;
+            }
+            .btn-minimal:hover {
+                border-bottom-color: white;
+                color: white;
+                padding-bottom: 8px;
+            }
+
+            /* Single-Line Elegant Trust Strip */
+            .trust-strip-elegant {
+                text-align: center;
+                padding: 15px 5%;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+                font-family: var(--font-sans);
+                font-size: 0.6rem;
+                color: rgba(255, 255, 255, 0.4);
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-weight: 400;
+            }
+            .trust-strip-elegant span {
+                margin: 0 15px;
+                opacity: 0.2;
+            }
+
+            /* =========================================
+           BESPOKE FLOATING WHATSAPP PILL
+        ========================================= */
+            .floating-wa {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                z-index: 9999;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                background: rgba(18, 28, 25, 0.6); /* Translucent Ink Dark */
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: white;
+                padding: 10px 22px;
+                border-radius: 40px;
+                font-family: var(--font-sans);
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                transition: all 0.4s ease;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+            .floating-wa i {
+                font-size: 1.1rem;
+                color: var(--accent); /* Elegant gold instead of neon green */
+                transition: color 0.4s ease;
+            }
+            .floating-wa:hover {
+                background: white;
+                color: var(--ink-dark);
+                border-color: white;
+                transform: translateY(-3px);
+            }
+            .floating-wa:hover i {
+                color: var(
+                    --whatsapp
+                ); /* Reveal the recognizable green only on hover */
+            }
+
+            /* =========================================
+           COMMERCIAL ARCHIVAL PACKAGES
+        ========================================= */
+            .section-padding {
+                padding: 8rem 0;
+            }
+            .section-header {
+                text-align: center;
+                margin-bottom: 5rem;
+            }
+            .section-header h2 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                letter-spacing: 1px;
+            }
+            .section-header p {
+                color: var(--tech-slate);
+                max-width: 500px;
+                margin: 0 auto;
+                font-family: var(--font-serif);
+                font-style: italic;
+                font-size: 1.3rem;
+            }
+
+            .packages-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 3rem;
+            }
+
+            .pkg-card {
+                border: 1px solid var(--line-art);
+                padding: 2rem;
+                background-color: white;
+                position: relative;
+                transition: all 0.5s ease;
+                display: flex;
+                flex-direction: column;
+            }
+            .pkg-card:hover {
+                border-color: var(--ink-dark);
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-commercial);
+            }
+
+            .pkg-img-arch {
+                position: relative;
+                height: 260px;
+                margin-bottom: 2rem;
+                border-radius: 200px 200px 0 0;
+                overflow: hidden;
+                border: 1px solid var(--line-art);
+            }
+            .pkg-img-arch img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 1s ease;
+            }
+            .pkg-card:hover .pkg-img-arch img {
+                transform: scale(1.05);
+            }
+
+            .pkg-title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                font-style: italic;
+                text-align: center;
+                font-weight: 400;
+            }
+
+            .archive-data {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 1rem;
+                font-size: 0.85rem;
+                border-bottom: 1px dashed var(--line-art);
+                padding-bottom: 0.6rem;
+            }
+            .archive-label {
+                color: var(--tech-slate);
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-size: 0.7rem;
+            }
+            .archive-value {
+                color: var(--ink-dark);
+                font-weight: 400;
+                text-align: right;
+                letter-spacing: 0.5px;
+            }
+
+            .pkg-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-top: auto;
+                padding-top: 1.5rem;
+            }
+            .pkg-price {
+                font-family: var(--font-sans);
+            }
+            .pkg-price span {
+                display: block;
+                font-size: 0.7rem;
+                color: var(--tech-slate);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 4px;
+            }
+            .pkg-price strong {
+                font-size: 1.6rem;
+                color: var(--ink-dark);
+                font-weight: 500;
+                display: block;
+                line-height: 1;
+            }
+
+            .btn-card {
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                border-bottom: 1px solid var(--ink-dark);
+                padding-bottom: 4px;
+                transition: opacity 0.3s;
+            }
+            .btn-card:hover {
+                opacity: 0.6;
+            }
+
+            /* =========================================
+           ESSENTIAL INFO SECTION
+        ========================================= */
+            .info-section {
+                background-color: white;
+                border-top: 1px solid var(--line-art);
+            }
+
+            .info-card {
+                background: var(--bg-paper);
+                padding: 4rem;
+                border: 1px solid var(--line-art);
+                margin-bottom: 5rem;
+            }
+            .info-card h3 {
+                font-family: var(--font-serif);
+                font-size: 1.8rem;
+                font-style: italic;
+                margin-bottom: 2.5rem;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                color: var(--ink-dark);
+                font-weight: 400;
+            }
+
+            .check-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            .check-list li {
+                position: relative;
+                padding-left: 30px;
+                font-size: 0.95rem;
+                color: var(--tech-slate);
+                line-height: 1.6;
+                font-weight: 300;
+            }
+            .check-list li::before {
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                position: absolute;
+                left: 0;
+                top: 2px;
+                content: "\f00c";
+                color: var(--accent);
+                font-size: 0.9rem;
+            }
+
+            .faq-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem 5rem;
+            }
+            .faq-item {
+                border-bottom: 1px solid var(--line-art);
+                padding-bottom: 1.5rem;
+            }
+            .faq-item h4 {
+                font-family: var(--font-sans);
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                color: var(--ink-dark);
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+            .faq-item p {
+                font-size: 0.9rem;
+                color: var(--tech-slate);
+                margin: 0;
+                font-weight: 300;
+                line-height: 1.7;
+            }
+
+            /* =========================================
+           FOOTER
+        ========================================= */
+            footer {
+                border-top: 1px solid var(--line-art);
+                padding: 6rem 0 3rem 0;
+                background-color: var(--bg-paper);
+            }
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+                gap: 4rem;
+                margin-bottom: 5rem;
+            }
+            .footer-logo {
+                font-family: var(--font-serif);
+                font-size: 2rem;
+                font-weight: 400;
+                color: var(--ink-dark);
+                margin-bottom: 1rem;
+                display: block;
+                letter-spacing: 1px;
+            }
+            .footer-logo span {
+                font-style: italic;
+                color: var(--tech-slate);
+            }
+
+            .footer-col h4 {
+                font-family: var(--font-sans);
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                margin-bottom: 2rem;
+                color: var(--ink-dark);
+            }
+            .footer-links li {
+                margin-bottom: 1rem;
+                font-family: var(--font-serif);
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+            .footer-links a {
+                color: var(--tech-slate);
+                transition: color 0.3s;
+            }
+            .footer-links a:hover {
+                color: var(--ink-dark);
+            }
+
+            .footer-bottom {
+                border-top: 1px solid var(--line-art);
+                padding-top: 2rem;
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.7rem;
+                color: var(--tech-slate);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            /* =========================================
+           RESPONSIVE
+        ========================================= */
+            @media (max-width: 768px) {
+                .header-links {
+                    display: none;
+                }
+                .hero-content {
+                    padding-bottom: 2rem;
+                }
+                .hero-content h1 {
+                    font-size: 2.5rem;
+                }
+                .trust-strip-elegant {
+                    display: none;
+                }
+
+                .check-list {
+                    grid-template-columns: 1fr;
+                }
+                .info-card {
+                    padding: 2rem;
+                }
+                .faq-grid {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+                .footer-grid {
+                    grid-template-columns: 1fr;
+                    gap: 3rem;
+                    text-align: center;
+                }
+                .footer-bottom {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 15px;
+                }
+
+                .floating-wa {
+                    bottom: 20px;
+                    right: 20px;
+                    padding: 10px 18px;
+                }
+                .floating-wa span {
+                    display: none;
+                } /* Hide text on mobile, just icon */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- BESPOKE WHATSAPP PILL -->
+        <a
+            href="https://wa.me/917459999999?text=Namaste!%20I%20would%20like%20to%20enquire%20about%20the%20Char%20Dham%20journeys."
+            class="floating-wa"
+            target="_blank"
+            aria-label="Enquire via WhatsApp"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Enquire</span>
+        </a>
+
+        <div class="bg-mantra-texture" aria-hidden="true">YATRA EXPO</div>
+
+        <!-- CINEMATIC HERO SECTION -->
+        <div class="hero-fullscreen">
+            <!-- Ultra Minimal Header -->
+            <header class="header">
+                <div class="container header-inner">
+                    <a href="/" class="logo">Yatra<span>Expo</span></a>
+                    <div class="header-links">
+                        <a href="tel:+917459999999">Connect</a>
+                        <a href="#packages">Journeys</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Spacer pushes text completely out of the image's focal point -->
+            <div class="hero-spacer"></div>
+
+            <!-- Highly Compact Text -->
+            <div class="hero-content">
+                <h1>The Sacred <i>Yatra</i></h1>
+                <p>
+                    Bespoke pilgrimages meticulously crafted. Surrender to
+                    devotion while we discreetly orchestrate every detail.
+                </p>
+
+                <a href="#packages" class="btn-minimal">Discover</a>
+            </div>
+
+            <!-- Single-line refined trust strip -->
+            <div class="trust-strip-elegant">
+                Verified Transport <span>•</span> Premium Stays
+                <span>•</span> 24/7 Support <span>•</span> Transparent Pricing
+            </div>
+        </div>
+        <!-- END HERO SECTION -->
+
+        <!-- PACKAGES SECTION -->
+        <section id="packages" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Curated <i>Journeys</i></h2>
+                    <p>
+                        Select from our meticulously designed itineraries,
+                        balancing deep spiritual resonance with absolute
+                        comfort.
+                    </p>
+                </div>
+
+                <div class="packages-grid">
+                    <!-- Package 1 -->
+                    <div class="pkg-card">
+                        <div class="pkg-img-arch">
+                            <img
+                                src="https://images.unsplash.com/photo-1542220468-d67b7e82ddfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Yamunotri"
+                                loading="lazy"
+                            />
+                        </div>
+                        <h3 class="pkg-title">Char Dham Complete</h3>
+
+                        <div class="archive-data">
+                            <span class="archive-label">Duration</span>
+                            <span class="archive-value">9 Nights</span>
+                        </div>
+                        <div class="archive-data">
+                            <span class="archive-label">Origin</span>
+                            <span class="archive-value"
+                                >Haridwar / Dehradun</span
+                            >
+                        </div>
+                        <div class="archive-data">
+                            <span class="archive-label">Route</span>
+                            <span class="archive-value">All 4 Shrines</span>
+                        </div>
+
+                        <div class="pkg-footer">
+                            <div class="pkg-price">
+                                <span>Starting From</span>
+                                <strong>₹24,999</strong>
+                            </div>
+                            <a
+                                href="https://wa.me/917459999999?text=I%20am%20interested%20in%20the%20Char%20Dham%20Complete%20package."
+                                target="_blank"
+                                class="btn-card"
+                                >Enquire</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Package 2 -->
+                    <div class="pkg-card">
+                        <div class="pkg-img-arch">
+                            <img
+                                src="https://images.unsplash.com/photo-1601246376510-7294ee5cdeac?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Badrinath"
+                                loading="lazy"
+                            />
+                        </div>
+                        <h3 class="pkg-title">Do Dham Premium</h3>
+
+                        <div class="archive-data">
+                            <span class="archive-label">Duration</span>
+                            <span class="archive-value">5 Nights</span>
+                        </div>
+                        <div class="archive-data">
+                            <span class="archive-label">Origin</span>
+                            <span class="archive-value"
+                                >Haridwar / Dehradun</span
+                            >
+                        </div>
+                        <div class="archive-data">
+                            <span class="archive-label">Route</span>
+                            <span class="archive-value"
+                                >Kedarnath & Badrinath</span
+                            >
+                        </div>
+
+                        <div class="pkg-footer">
+                            <div class="pkg-price">
+                                <span>Starting From</span>
+                                <strong>₹16,500</strong>
+                            </div>
+                            <a
+                                href="https://wa.me/917459999999?text=I%20am%20interested%20in%20the%20Do%20Dham%20Premium%20package."
+                                target="_blank"
+                                class="btn-card"
+                                >Enquire</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Package 3 -->
+                    <div class="pkg-card">
+                        <div class="pkg-img-arch">
+                            <img
+                                src="https://images.unsplash.com/photo-1616010041117-646bc0f4f9f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Kedarnath"
+                                loading="lazy"
+                            />
+                        </div>
+                        <h3 class="pkg-title">Kedarnath VIP</h3>
+
+                        <div class="archive-data">
+                            <span class="archive-label">Duration</span>
+                            <span class="archive-value">3 Nights</span>
+                        </div>
+                        <div class="archive-data">
+                            <span class="archive-label">Origin</span>
+                            <span class="archive-value">Haridwar</span>
+                        </div>
+                        <div class="archive-data">
+                            <span class="archive-label">Route</span>
+                            <span class="archive-value">Kedarnath Only</span>
+                        </div>
+
+                        <div class="pkg-footer">
+                            <div class="pkg-price">
+                                <span>Starting From</span>
+                                <strong>₹9,999</strong>
+                            </div>
+                            <a
+                                href="https://wa.me/917459999999?text=I%20am%20interested%20in%20the%20Kedarnath%20VIP%20package."
+                                target="_blank"
+                                class="btn-card"
+                                >Enquire</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESSENTIAL INFORMATION SECTION -->
+        <section class="section-padding info-section">
+            <div class="container">
+                <div class="section-header" style="margin-bottom: 4rem">
+                    <h2>Essential <i>Information</i></h2>
+                    <p>
+                        Transparent inclusions, travel policies, and answers to
+                        common queries.
+                    </p>
+                </div>
+
+                <!-- Inclusions Only -->
+                <div class="info-card">
+                    <h3>The YatraExpo Standard</h3>
+                    <ul class="check-list">
+                        <li>
+                            Premium Hotel & Luxury Swiss Camp Accommodation
+                            throughout the journey.
+                        </li>
+                        <li>
+                            Daily pure vegetarian, sattvic meals (Buffet
+                            Breakfast & Dinner).
+                        </li>
+                        <li>
+                            Private AC transportation (Sedan/SUV) from
+                            Haridwar/Dehradun.
+                        </li>
+                        <li>
+                            Mandatory Uttarakhand Government Yatra E-Pass &
+                            Registration Permits.
+                        </li>
+                        <li>
+                            Experienced local driver cum guide for the entire
+                            route.
+                        </li>
+                        <li>
+                            24/7 dedicated ground support team and emergency
+                            medical coordination.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- FAQs / Booking Procedure -->
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>What is the weather like? Is it very cold?</h4>
+                        <p>
+                            Temperatures can drop significantly at high
+                            altitudes like Kedarnath and Badrinath. Expect
+                            5-15°C during the day and near freezing (0-5°C) at
+                            night. Heavy, layered thermal clothing and
+                            windcheaters are strictly mandatory regardless of
+                            the month you travel.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What about walking and physical fitness?</h4>
+                        <p>
+                            The Kedarnath trek is roughly 16-22 km (depending on
+                            the starting point) and requires good physical
+                            stamina. Yamunotri involves a 6 km steep trek.
+                            Ponies and palanquins are readily available for
+                            hire. Badrinath and Gangotri are easily accessible
+                            by road.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What mandatory documents do I need?</h4>
+                        <p>
+                            Every pilgrim must carry a valid original Aadhar
+                            Card (or Passport for foreign nationals), the
+                            Government Yatra Registration E-Pass (which we will
+                            process for you), and a recent Medical Fitness
+                            Certificate confirming you are fit for high-altitude
+                            travel.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is the Booking & Cancellation Procedure?</h4>
+                        <p>
+                            A 30% advance secures your booking and transport. A
+                            40% installment is due 30 days before departure, and
+                            the remaining balance upon arrival. Cancellations
+                            made 30+ days prior receive a 75% refund.
+                            Cancellations within 15 days of travel are strictly
+                            non-refundable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <a href="/" class="footer-logo"
+                            >Yatra<span>Expo</span></a
+                        >
+                        <p
+                            style="
+                                font-family: var(--font-serif);
+                                font-size: 1.1rem;
+                                font-style: italic;
+                                color: var(--tech-slate);
+                                margin-bottom: 20px;
+                            "
+                        >
+                            Curating divine Himalayan journeys with absolute
+                            devotion and care.
+                        </p>
+                        <div
+                            style="
+                                font-size: 1.2rem;
+                                display: flex;
+                                gap: 15px;
+                                color: var(--ink-dark);
+                            "
+                        >
+                            <a href="#" style="color: inherit"
+                                ><i class="fa-brands fa-instagram"></i
+                            ></a>
+                            <a
+                                href="https://wa.me/917459999999"
+                                target="_blank"
+                                style="color: inherit"
+                                ><i class="fa-brands fa-whatsapp"></i
+                            ></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>The Agency</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">The Experience</a></li>
+                            <li><a href="#">Terms of Travel</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Journeys</h4>
+                        <ul class="footer-links">
+                            <li><a href="#packages">Char Dham</a></li>
+                            <li><a href="#packages">Do Dham</a></li>
+                            <li><a href="#packages">Ek Dham</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul class="footer-links">
+                            <li>Haridwar, Uttarakhand</li>
+                            <li>
+                                <a href="tel:+917459999999">+91 745 999 9999</a>
+                            </li>
+                            <li>
+                                <a href="mailto:namaste@yatraexpo.com"
+                                    >namaste@yatraexpo.com</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div>&copy; 2026 YATRA EXPO. CONFIDENTIAL & BESPOKE.</div>
+                    <div>
+                        SECURE TRANSACTIONS. APPROVED BY UTTARAKHAND TOURISM.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
